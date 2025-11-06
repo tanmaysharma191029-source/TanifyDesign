@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Tanify – Creative Studio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="brand">Tanify</div>
+    <nav class="links" id="mainNav">
+      <a class="active" data-scroll="#home">Home</a>
+      <a data-scroll="#pricing">Pricing</a>
+      <a data-scroll="#order">Order</a>
+      <a data-scroll="#faq">FAQ</a>
+      <a data-scroll="#about">About</a>
+      <a data-scroll="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="container">
+    <h1>Premium Thumbnails, Logos, Posters & Editing — Delivered Fast</h1>
+    <p class="lead">Festival Offer active now</p>
+    <div class="offer-box">Offer valid till <b>21 November</b></div>
+    <p class="small">If payment doesn’t work → Pay manually to <b>8440932404</b></p>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <h2>Pricing</h2>
+
+    <div class="page-box">
+      <h3>YouTube Thumbnails</h3>
+      <div class="grid5">
+        <div class="svc"><h3>Single</h3><div class="offer-box">₹79</div><button type="button" class="btn accent choose" data-service="thumbnail" data-plan="single">Choose</button></div>
+        <div class="svc"><h3>Triple</h3><div class="offer-box">₹149</div><button type="button" class="btn accent choose" data-service="thumbnail" data-plan="triple">Choose</button></div>
+        <div class="svc"><h3>Pack (10)</h3><div class="offer-box">₹449</div><button type="button" class="btn accent choose" data-service="thumbnail" data-plan="ten">Choose</button></div>
+      </div>
+    </div>
+
+    <div class="page-box">
+      <h3>Logo</h3>
+      <div class="grid5"><div class="svc"><h3>Professional Logo</h3><div class="offer-box">₹99</div><button type="button" class="btn accent choose" data-service="logo" data-plan="basic">Choose</button></div></div>
+    </div>
+
+    <div class="page-box">
+      <h3>Banner</h3>
+      <div class="grid5"><div class="svc"><h3>YouTube Banner</h3><div class="offer-box">₹149</div><button type="button" class="btn accent choose" data-service="banner" data-plan="basic">Choose</button></div></div>
+    </div>
+
+    <div class="page-box">
+      <h3>Poster</h3>
+      <div class="grid5"><div class="svc"><h3>Poster</h3><div class="offer-box">₹199</div><button type="button" class="btn accent choose" data-service="poster" data-plan="basic">Choose</button></div></div>
+    </div>
+
+    <div class="page-box">
+      <h3>Video Editing</h3>
+      <div class="grid5">
+        <div class="svc"><h3>Long</h3><div class="offer-box">₹299</div><button type="button" class="btn accent choose" data-service="video" data-plan="long">Choose</button></div>
+        <div class="svc"><h3>Shorts</h3><div class="offer-box">₹99</div><button type="button" class="btn accent choose" data-service="video" data-plan="shorts">Choose</button></div>
+        <div class="svc"><h3>Vlogging</h3><div class="offer-box">₹149</div><button type="button" class="btn accent choose" data-service="video" data-plan="vlog">Choose</button></div>
+        <div class="svc"><h3>Faceless Long</h3><div class="offer-box">₹399</div><button type="button" class="btn accent choose" data-service="video" data-plan="faceless_long">Choose</button></div>
+        <div class="svc"><h3>Faceless Shorts</h3><div class="offer-box">₹149</div><button type="button" class="btn accent choose" data-service="video" data-plan="faceless_shorts">Choose</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="container page-box">
+    <h2>Order Form</h2>
+    <p class="small">Manual payment: 8440932404</p>
+
+    <div class="form" id="orderForm" autocomplete="off">
+      <select id="service" class="in"></select>
+      <select id="plan" class="in"></select>
+      <input id="title" class="in" placeholder="Title / Topic"/>
+      <textarea id="notes" class="in" placeholder="Notes (style, colors etc)"></textarea>
+
+      <!-- Coupon field -->
+      <input id="coupon" class="in" placeholder="Have a coupon? e.g. TANIFY50" autocomplete="off"/>
+      <div class="small" id="couponHint"></div>
+
+      <div class="row">
+        <button type="button" class="btn accent" onclick="confirmOrder(event)">Confirm & Pay</button>
+        <span id="amtLine" class="small"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container page-box">
+    <h2>Your Last Order</h2>
+    <p class="small">After your first order, it will show here</p>
+    <div id="lastOrderBox" class="card" style="display:none;"></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container page-box">
+    <h2>FAQ</h2>
+    <div class="faq">
+      <button type="button" class="faq-q">Delivery time?</button>
+      <div class="faq-a">Single thumbnail: same day. Triple: 3 days. Pack10: 5 days. Video 2-5 days.</div>
+
+      <button type="button" class="faq-q">Revisions?</button>
+      <div class="faq-a">Light tweaks free. Full redesign counts as new concept.</div>
+
+      <button type="button" class="faq-q">Manual payment?</button>
+      <div class="faq-a">Pay to 8440932404 and send screenshot on WhatsApp.</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container page-box">
+    <h2>About</h2>
+    <p>I am Tanmay Sharma from Sikar (Rajasthan).</p>
+    <p>I make creative thumbnails, posters, banners, logos & edit videos for creators.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container page-box">
+    <h2>Contact</h2>
+    <div class="contact-row">
+      <div class="card contact-card">
+        <h3>WhatsApp</h3> <br>
+        <a class="btn accent" href="https://wa.me/918741872408" target="_blank">Chat Now</a> <br> <br>
+        <p class="small">24/7 Fast Support</p>
+      </div>
+      <div class="card contact-card">
+        <h3>Manual Payment</h3>
+        <div class="offer-box">8440932404</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Floating WhatsApp -->
+<a class="wa-float" href="https://wa.me/918741872408" target="_blank">
+  Chat Support <span>24/7 Fast Support</span>
+</a>
+
+<!-- ===== Order Choice Popup (with Close) ===== -->
+<div id="payPopup" class="modal-backdrop" style="
+  display:none; position:fixed; inset:0; z-index:9999;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:saturate(140%) blur(2px);
+  align-items:center; justify-content:center; padding:18px;">
+  <div id="payModal" class="modal" role="dialog" aria-modal="true" style="
+    position:relative; width:min(560px, 92vw); background:#fff; color:#111;
+    border-radius:14px; box-shadow:0 10px 40px rgba(0,0,0,.3);
+    padding:20px 20px 16px;">
+    
+    <!-- Close button -->
+    <button id="pp_closeBtn" title="Close" style="
+      position:absolute; top:10px; right:10px; border:none; cursor:pointer;
+      background:#f1f1f1; color:#333; border-radius:8px; padding:6px 10px; font-weight:700;">✕</button>
+
+    <h2 style="margin:0 0 6px 0;">Order Created <span style="color:#22aa55;">✅</span></h2>
+    <p class="small" style="margin:0 0 10px 0; opacity:.8;">Choose how you want to proceed:</p>
+
+    <div class="card" style="border:1px solid #eee; border-radius:10px; padding:10px; margin-bottom:12px;">
+      <pre id="pp_letter" style="white-space:pre-wrap; font-family:inherit; margin:0; line-height:1.55;"></pre>
+    </div>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <button type="button" id="pp_directPay" style="
+        background:#e50914; color:#fff; border:none; padding:12px 16px;
+        border-radius:10px; cursor:pointer; font-weight:800;">
+        Direct Pay (UPI)
+      </button>
+      <button type="button" id="pp_whatsappFirst" style="
+        background:#f1f1f1; color:#111; border:none; padding:12px 16px;
+        border-radius:10px; cursor:pointer; font-weight:700;">
+        WhatsApp First
+      </button>
+    </div>
+
+    <p class="small" style="margin:10px 0 0 0; opacity:.75;">
+      Tip: If UPI didn’t open, pay manually to <b>8440932404</b> and send reference on WhatsApp.
+    </p>
+  </div>
+</div>
+
+
+    <!-- NOTE: no close button -->
+    <p class="small" style="margin-top:10px;">
+      Tip: If UPI didn’t open, pay manually to <b>8440932404</b> and send reference on WhatsApp.
+    </p>
+  </div>
+</div>
+
+<footer class="footer"><div class="container">© 2025 Tanify — Tanmay Sharma</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
